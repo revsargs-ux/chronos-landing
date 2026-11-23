@@ -50,7 +50,16 @@ nav.links a:hover{color:var(--gold)}
   background-image:linear-gradient(rgba(201,169,106,.08) 1px,transparent 1px),
                    linear-gradient(90deg,rgba(201,169,106,.08) 1px,transparent 1px);
   background-size:72px 72px;mask-image:radial-gradient(circle at 50% 40%,#000 35%,transparent 78%)}
-.hero .inner{position:relative;z-index:2;max-width:900px}
+.hero .inner{position:relative;z-index:2;width:100%}
+.hero-grid{display:grid;grid-template-columns:1.35fr .85fr;gap:56px;align-items:center}
+.herocard{border:1px solid rgba(201,169,106,.3);background:linear-gradient(160deg,rgba(18,39,64,.92),rgba(10,25,47,.75));
+  padding:28px 26px;backdrop-filter:blur(6px)}
+.herocard .h-title{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
+.hc{padding:14px 0;border-bottom:1px solid rgba(201,169,106,.14)}
+.hc:last-of-type{border-bottom:0}
+.hc b{display:block;font-size:14.5px;font-weight:500;margin-bottom:3px}
+.hc span{font-size:12.5px;color:var(--muted);line-height:1.5}
+.herocard .btn{width:100%;justify-content:center;margin-top:16px}
 .hero h1{font-size:clamp(40px,6.4vw,76px);line-height:1.04;margin:22px 0 22px}
 .hero h1 em{font-style:normal;color:var(--gold)}
 .hero p.lead{font-size:clamp(15px,1.5vw,18px);color:var(--muted);max-width:640px;font-weight:300}
@@ -75,7 +84,7 @@ section{padding:104px 0}
   padding:30px 26px;transition:.3s;position:relative;overflow:hidden}
 .card:hover{border-color:rgba(201,169,106,.55);transform:translateY(-3px)}
 .card .num{font-family:'Cormorant Garamond',serif;font-size:13px;color:var(--gold);letter-spacing:.16em}
-.card h3{font-size:22px;margin:12px 0 10px}
+.card h3{font-size:22px;margin:12px 0 10px;line-height:1.2;min-height:2.4em;display:flex;align-items:flex-end}
 .card p{font-size:13.6px;color:var(--muted)}
 .card ul{margin-top:14px;font-size:13px;color:var(--muted);list-style:none}
 .card ul li{padding-left:16px;position:relative;margin-bottom:6px}
@@ -135,6 +144,8 @@ footer a:hover{color:var(--gold)}
 @media(max-width:900px){
   nav.links{display:none}
   .check .cols,.contact .cols{grid-template-columns:1fr;gap:30px}
+  .hero-grid{grid-template-columns:1fr;gap:34px}
+  .herocard{order:2}
   .stats .row{grid-template-columns:repeat(2,1fr)}
   .stat{border-bottom:1px solid rgba(201,169,106,.14)}
   section{padding:72px 0}
@@ -169,6 +180,8 @@ footer a:hover{color:var(--gold)}
 <section class="hero" id="top">
   <div class="grid-lines"></div>
   <div class="wrap inner">
+   <div class="hero-grid">
+    <div>
     <div class="eyebrow">Ереван · Агентство недвижимости</div>
     <h1>Недвижимость Еревана<br>без <em>сюрпризов</em></h1>
     <p class="lead">Продажа, подбор и аренда с проверкой документов, ценой по данным Кадастра и юридическим сопровождением сделки. Один агент ведёт вас от оценки до ключей.</p>
@@ -177,6 +190,16 @@ footer a:hover{color:var(--gold)}
       <a class="btn" href="#services">Что мы делаем</a>
     </div>
     <p class="note">Консультация бесплатна. Отвечаем в течение 2 часов в рабочее время, Пн–Сб 09:00–19:00.</p>
+    </div>
+    <aside class="herocard">
+      <div class="h-title">Что входит в услугу</div>
+      <div class="hc"><b>Оценка по Кадастру</b><span>Цена по реальным сделкам района, а не «как у соседа»</span></div>
+      <div class="hc"><b>Проверка документов</b><span>Собственник, обременения, аресты, ипотека — до аванса</span></div>
+      <div class="hc"><b>Сопровождение сделки</b><span>Нотариус, кадастр, безопасные расчёты</span></div>
+      <div class="hc"><b>Один агент до ключей</b><span>Без переключений между менеджерами</span></div>
+      <a class="btn solid" href="https://wa.me/37498712268" target="_blank" rel="noopener">Написать в WhatsApp</a>
+    </aside>
+   </div>
   </div>
 </section>
 
@@ -217,7 +240,7 @@ footer a:hover{color:var(--gold)}
       </div>
       <div class="card reveal">
         <div class="num">04</div>
-        <h3>Инвестиции и новостройки</h3>
+        <h3>Инвестиции<br>и новостройки</h3>
         <p>Считаем доходность до покупки, проверяем застройщика и сроки сдачи.</p>
         <ul><li>Сравнение ЖК по цене метра</li><li>Проверка разрешений</li><li>Рассрочка и ипотека</li></ul>
       </div>
@@ -275,7 +298,7 @@ footer a:hover{color:var(--gold)}
     </div>
     <div class="market reveal">
       <div class="cell"><b>+20,3%</b><span>рост цены метра за 12 месяцев</span></div>
-      <div class="cell"><b>546 150 ֏</b><span>средняя цена метра в Ереване</span></div>
+      <div class="cell"><b>546 150 AMD</b><span>средняя цена метра в Ереване</span></div>
       <div class="cell"><b>3,3×</b><span>разброс цен между районами</span></div>
       <div class="cell"><b>01.06.2027</b><span>вступает в силу закон о риелторской деятельности</span></div>
     </div>
