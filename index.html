@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CHRONOS Capital &amp; Realty — недвижимость Еревана</title>
+<meta name="description" content="Агентство недвижимости в Ереване: продажа, подбор и аренда с проверкой документов, оценкой по данным Кадастра и юридическим сопровождением сделки.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0A192F; --navy-2:#0E2138; --navy-3:#122740;
+  --gold:#C9A96A; --gold-2:#E3CC9A;
+  --text:#E6EDF6; --muted:#9FB0C6; --line:rgba(201,169,106,.28);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--navy);color:var(--text);font-family:'Montserrat',-apple-system,Segoe UI,Roboto,sans-serif;
+  font-weight:300;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,.serif{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;letter-spacing:.01em}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+.eyebrow{font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:600}
+
+/* nav */
+header{position:fixed;top:0;left:0;right:0;z-index:50;backdrop-filter:blur(14px);
+  background:rgba(10,25,47,.72);border-bottom:1px solid rgba(201,169,106,.16);transition:.3s}
+header.solid{background:rgba(10,25,47,.95)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:flex;align-items:center;gap:12px}
+.logo .mark{width:38px;height:38px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;
+  font-family:'Cormorant Garamond',serif;font-size:19px;color:var(--gold);font-weight:600}
+.logo .name{font-size:15px;letter-spacing:.16em;font-weight:500}
+.logo .name span{display:block;font-size:9px;letter-spacing:.24em;color:var(--muted);margin-top:2px}
+nav.links{display:flex;gap:30px;font-size:13px;color:var(--muted)}
+nav.links a:hover{color:var(--gold)}
+.btn{display:inline-flex;align-items:center;gap:9px;padding:13px 24px;border-radius:2px;font-size:13px;
+  font-weight:500;letter-spacing:.04em;transition:.25s;border:1px solid var(--gold);color:var(--gold);cursor:pointer}
+.btn:hover{background:var(--gold);color:var(--navy)}
+.btn.solid{background:var(--gold);color:var(--navy)}
+.btn.solid:hover{background:var(--gold-2);border-color:var(--gold-2)}
+
+/* hero */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:120px 0 80px;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;
+  background:radial-gradient(1100px 620px at 78% 12%,rgba(201,169,106,.16),transparent 62%),
+             radial-gradient(820px 520px at 8% 88%,rgba(30,64,110,.55),transparent 60%);}
+.grid-lines{position:absolute;inset:0;opacity:.30;
+  background-image:linear-gradient(rgba(201,169,106,.08) 1px,transparent 1px),
+                   linear-gradient(90deg,rgba(201,169,106,.08) 1px,transparent 1px);
+  background-size:72px 72px;mask-image:radial-gradient(circle at 50% 40%,#000 35%,transparent 78%)}
+.hero .inner{position:relative;z-index:2;max-width:900px}
+.hero h1{font-size:clamp(40px,6.4vw,76px);line-height:1.04;margin:22px 0 22px}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero p.lead{font-size:clamp(15px,1.5vw,18px);color:var(--muted);max-width:640px;font-weight:300}
+.hero .cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:38px}
+.hero .note{font-size:12px;color:var(--muted);margin-top:18px;letter-spacing:.02em}
+
+/* stats */
+.stats{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:rgba(14,33,56,.5)}
+.stats .row{display:grid;grid-template-columns:repeat(4,1fr)}
+.stat{padding:34px 22px;border-right:1px solid rgba(201,169,106,.14)}
+.stat:last-child{border-right:0}
+.stat b{display:block;font-family:'Cormorant Garamond',serif;font-size:clamp(28px,3.6vw,42px);color:var(--gold);font-weight:600}
+.stat span{font-size:12px;color:var(--muted);letter-spacing:.03em}
+
+/* sections */
+section{padding:104px 0}
+.head{max-width:660px;margin-bottom:54px}
+.head h2{font-size:clamp(30px,3.8vw,46px);margin:14px 0 16px;line-height:1.14}
+.head p{color:var(--muted);font-size:15.5px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(258px,1fr));gap:18px}
+.card{background:linear-gradient(180deg,rgba(18,39,64,.85),rgba(14,33,56,.55));border:1px solid rgba(201,169,106,.16);
+  padding:30px 26px;transition:.3s;position:relative;overflow:hidden}
+.card:hover{border-color:rgba(201,169,106,.55);transform:translateY(-3px)}
+.card .num{font-family:'Cormorant Garamond',serif;font-size:13px;color:var(--gold);letter-spacing:.16em}
+.card h3{font-size:22px;margin:12px 0 10px}
+.card p{font-size:13.6px;color:var(--muted)}
+.card ul{margin-top:14px;font-size:13px;color:var(--muted);list-style:none}
+.card ul li{padding-left:16px;position:relative;margin-bottom:6px}
+.card ul li::before{content:'—';position:absolute;left:0;color:var(--gold)}
+
+/* process */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:0;border-top:1px solid var(--line)}
+.step{padding:34px 26px 34px 0;border-bottom:1px solid var(--line);position:relative}
+.step::after{content:'';position:absolute;top:0;bottom:0;right:0;width:1px;background:rgba(201,169,106,.14)}
+.step:last-child::after{display:none}
+.step .n{font-family:'Cormorant Garamond',serif;font-size:44px;color:rgba(201,169,106,.32);line-height:1}
+.step h3{font-size:19px;margin:8px 0 10px}
+.step p{font-size:13.4px;color:var(--muted)}
+
+/* check block */
+.check{background:linear-gradient(135deg,rgba(18,39,64,.9),rgba(10,25,47,.9));border:1px solid var(--line);padding:48px 44px}
+.check .cols{display:grid;grid-template-columns:1.1fr 1fr;gap:46px;align-items:start}
+.check h2{font-size:clamp(26px,3.2vw,38px);line-height:1.16;margin:12px 0 16px}
+.check p{color:var(--muted);font-size:14.5px}
+.tick{list-style:none;margin-top:8px}
+.tick li{position:relative;padding:15px 0 15px 34px;border-bottom:1px solid rgba(201,169,106,.14);font-size:14px}
+.tick li:last-child{border-bottom:0}
+.tick li::before{content:'✓';position:absolute;left:0;top:13px;color:var(--gold);font-size:14px}
+.tick li span{display:block;color:var(--muted);font-size:12.5px;margin-top:3px}
+
+/* market */
+.market{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;background:rgba(201,169,106,.16)}
+.market .cell{background:var(--navy);padding:28px 24px}
+.market .cell b{display:block;font-family:'Cormorant Garamond',serif;font-size:34px;color:var(--gold)}
+.market .cell span{font-size:12.5px;color:var(--muted)}
+
+/* faq */
+.faq{max-width:860px}
+.q{border-bottom:1px solid rgba(201,169,106,.16)}
+.q summary{cursor:pointer;list-style:none;padding:22px 34px 22px 0;font-size:15.5px;position:relative;font-weight:400}
+.q summary::-webkit-details-marker{display:none}
+.q summary::after{content:'+';position:absolute;right:6px;top:18px;color:var(--gold);font-size:20px;transition:.25s}
+.q[open] summary::after{transform:rotate(45deg)}
+.q p{padding:0 0 22px;color:var(--muted);font-size:14px;max-width:720px}
+
+/* contact */
+.contact{background:linear-gradient(180deg,rgba(14,33,56,.7),rgba(10,25,47,1));border-top:1px solid var(--line)}
+.contact .cols{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.contact h2{font-size:clamp(30px,3.8vw,46px);line-height:1.12;margin:14px 0 18px}
+.contact .lines{display:flex;flex-direction:column;gap:2px;border-top:1px solid var(--line)}
+.line{display:flex;justify-content:space-between;gap:16px;padding:17px 0;border-bottom:1px solid rgba(201,169,106,.14);
+  font-size:14px;transition:.2s}
+a.line:hover{color:var(--gold);padding-left:6px}
+.line span{color:var(--muted);font-size:12.5px;letter-spacing:.04em;text-transform:uppercase}
+footer{border-top:1px solid var(--line);padding:34px 0;font-size:12px;color:var(--muted)}
+footer .row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer a:hover{color:var(--gold)}
+
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+
+@media(max-width:900px){
+  nav.links{display:none}
+  .check .cols,.contact .cols{grid-template-columns:1fr;gap:30px}
+  .stats .row{grid-template-columns:repeat(2,1fr)}
+  .stat{border-bottom:1px solid rgba(201,169,106,.14)}
+  section{padding:72px 0}
+  .check{padding:32px 24px}
+}
+@media(max-width:520px){
+  .hero{padding-top:104px}
+  .btn{width:100%;justify-content:center}
+  .hero .cta{flex-direction:column}
+}
+</style>
+</head>
+<body>
+
+<header id="hdr">
+  <div class="wrap nav">
+    <a href="#top" class="logo">
+      <div class="mark">C</div>
+      <div class="name">CHRONOS<span>CAPITAL &amp; REALTY</span></div>
+    </a>
+    <nav class="links">
+      <a href="#services">Услуги</a>
+      <a href="#process">Как работаем</a>
+      <a href="#check">Проверка</a>
+      <a href="#market">Рынок</a>
+      <a href="#faq">Вопросы</a>
+    </nav>
+    <a class="btn solid" href="https://wa.me/37498712268" target="_blank" rel="noopener">Написать в WhatsApp</a>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="grid-lines"></div>
+  <div class="wrap inner">
+    <div class="eyebrow">Ереван · Агентство недвижимости</div>
+    <h1>Недвижимость Еревана<br>без <em>сюрпризов</em></h1>
+    <p class="lead">Продажа, подбор и аренда с проверкой документов, ценой по данным Кадастра и юридическим сопровождением сделки. Один агент ведёт вас от оценки до ключей.</p>
+    <div class="cta">
+      <a class="btn solid" href="https://wa.me/37498712268" target="_blank" rel="noopener">Получить консультацию</a>
+      <a class="btn" href="#services">Что мы делаем</a>
+    </div>
+    <p class="note">Консультация бесплатна. Отвечаем в течение 2 часов в рабочее время, Пн–Сб 09:00–19:00.</p>
+  </div>
+</section>
+
+<div class="stats">
+  <div class="wrap row">
+    <div class="stat"><b>2,5%</b><span>комиссия по факту сделки</span></div>
+    <div class="stat"><b>24 ч</b><span>на оценку объекта по данным Кадастра</span></div>
+    <div class="stat"><b>4</b><span>уровня проверки контрагентов</span></div>
+    <div class="stat"><b>0</b><span>предоплат за показ и подбор</span></div>
+  </div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <div class="head reveal">
+      <div class="eyebrow">Услуги</div>
+      <h2>Четыре направления, один стандарт работы</h2>
+      <p>Не «продаём что есть», а решаем задачу: продать дороже, купить без риска или сдать без простоев.</p>
+    </div>
+    <div class="cards">
+      <div class="card reveal">
+        <div class="num">01</div>
+        <h3>Продажа объекта</h3>
+        <p>Оценка по реальным сделкам Кадастра, стратегия цены и подготовка к показу.</p>
+        <ul><li>Анализ рынка и конкурентов</li><li>Съёмка и видеотур</li><li>Продвижение и показы</li></ul>
+      </div>
+      <div class="card reveal">
+        <div class="num">02</div>
+        <h3>Подбор и покупка</h3>
+        <p>Ищем под бюджет и задачу, проверяем документы до внесения аванса.</p>
+        <ul><li>Критерии и короткий список</li><li>Проверка собственника</li><li>Торг и сопровождение</li></ul>
+      </div>
+      <div class="card reveal">
+        <div class="num">03</div>
+        <h3>Аренда</h3>
+        <p>Долгосрочная аренда для себя и для сдачи: договор, депозит, приёмка.</p>
+        <ul><li>Подбор за 2–3 дня</li><li>Проверка арендатора</li><li>Договор и опись имущества</li></ul>
+      </div>
+      <div class="card reveal">
+        <div class="num">04</div>
+        <h3>Инвестиции и новостройки</h3>
+        <p>Считаем доходность до покупки, проверяем застройщика и сроки сдачи.</p>
+        <ul><li>Сравнение ЖК по цене метра</li><li>Проверка разрешений</li><li>Рассрочка и ипотека</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="process" style="padding-top:0">
+  <div class="wrap">
+    <div class="head reveal">
+      <div class="eyebrow">Как работаем</div>
+      <h2>Четыре шага до сделки</h2>
+      <p>Прозрачный процесс: вы всегда знаете, на каком этапе объект и что будет дальше.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><div class="n">01</div><h3>Оценка и стратегия</h3>
+        <p>Анализ района, справедливая цена, позиционирование объекта на рынке.</p></div>
+      <div class="step reveal"><div class="n">02</div><h3>Подготовка</h3>
+        <p>Съёмка, видеотур, продающее описание. Медиа-услуга — отдельно, по расчёту.</p></div>
+      <div class="step reveal"><div class="n">03</div><h3>Продвижение</h3>
+        <p>Соцсети, площадки объявлений, покупатели из диаспоры и релокации.</p></div>
+      <div class="step reveal"><div class="n">04</div><h3>Сделка под ключ</h3>
+        <p>Переговоры, документы, нотариус, кадастр, безопасные расчёты.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="check" style="padding-top:0">
+  <div class="wrap">
+    <div class="check reveal">
+      <div class="cols">
+        <div>
+          <div class="eyebrow">Проверка контрагента</div>
+          <h2>Проверяем до сделки,<br>а не после</h2>
+          <p>Стандартная процедура для каждого объекта и каждого участника: открытые реестры, судебные базы, документы. Отчёт — на одну страницу, без юридического тумана.</p>
+          <p style="margin-top:16px;font-size:13px;color:rgba(159,176,198,.75)">Проверка входит в услугу и для клиента бесплатна.</p>
+        </div>
+        <ul class="tick">
+          <li>Собственник объекта<span>Кто владеет, есть ли аресты, ипотека, обременения</span></li>
+          <li>Застройщик<span>Регистрация, разрешения, сданные объекты, суды с дольщиками</span></li>
+          <li>Покупатель или арендатор<span>Реальность аккаунта, платёжеспособность, история</span></li>
+          <li>Посредник и контактное лицо<span>Работает ли в заявленной компании, история объявлений</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="market" style="padding-top:0">
+  <div class="wrap">
+    <div class="head reveal">
+      <div class="eyebrow">Рынок · ноябрь 2026</div>
+      <h2>Цифры, на которые мы опираемся</h2>
+      <p>Источник: Комитет кадастра РА, сделки с квартирами в Ереване.</p>
+    </div>
+    <div class="market reveal">
+      <div class="cell"><b>+20,3%</b><span>рост цены метра за 12 месяцев</span></div>
+      <div class="cell"><b>546 150 ֏</b><span>средняя цена метра в Ереване</span></div>
+      <div class="cell"><b>3,3×</b><span>разброс цен между районами</span></div>
+      <div class="cell"><b>01.06.2027</b><span>вступает в силу закон о риелторской деятельности</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="faq" style="padding-top:0">
+  <div class="wrap faq">
+    <div class="head reveal">
+      <div class="eyebrow">Вопросы</div>
+      <h2>Коротко о главном</h2>
+    </div>
+    <details class="q reveal"><summary>Сколько стоит ваша работа?</summary>
+      <p>Продажа и покупка — 2,5% от суммы сделки по факту. Аренда — 50% месячной ставки от первого месяца. Оценка, консультация и проверка документов — бесплатно. Съёмка и видеотур — отдельная услуга, считаем индивидуально.</p></details>
+    <details class="q reveal"><summary>Работаете с покупателями из-за рубежа?</summary>
+      <p>Да. Проводим видеопоказы, готовим пакет документов заранее, сопровождаем дистанционно до подписания и регистрации в Кадастре. Для сделки нужна доверенность либо личное присутствие на финальном этапе.</p></details>
+    <details class="q reveal"><summary>Зачем нужен эксклюзивный договор?</summary>
+      <p>Он фиксирует цену, срок и ответственность сторон, а также защищает вас от «двойных» показов и торга за спиной. Условия расторжения прописаны в договоре.</p></details>
+    <details class="q reveal"><summary>Кто отвечает за юридическую часть?</summary>
+      <p>Сделки сопровождает партнёрская адвокатская практика: проверка документов, предварительный договор, нотариус и регистрация. Мы отвечаем за подготовку и ведение процесса.</p></details>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <div class="eyebrow">Контакты</div>
+        <h2>Расскажите,<br>что вы ищете</h2>
+        <p style="color:var(--muted);font-size:15px;max-width:430px">Опишите объект или задачу в двух предложениях — ответим, какие варианты реальны и что стоит проверить в первую очередь.</p>
+        <div style="margin-top:30px;display:flex;gap:12px;flex-wrap:wrap">
+          <a class="btn solid" href="https://wa.me/37498712268" target="_blank" rel="noopener">WhatsApp</a>
+          <a class="btn" href="https://t.me/chronosrealty" target="_blank" rel="noopener">Telegram-канал</a>
+        </div>
+      </div>
+      <div class="lines">
+        <a class="line" href="tel:+37498712268"><span>Телефон</span>+374 98 71 22 68</a>
+        <a class="line" href="https://wa.me/37498712268" target="_blank" rel="noopener"><span>WhatsApp</span>+374 98 71 22 68</a>
+        <a class="line" href="https://t.me/chronosrealty" target="_blank" rel="noopener"><span>Telegram</span>t.me/chronosrealty</a>
+        <a class="line" href="https://instagram.com/chronos.realty" target="_blank" rel="noopener"><span>Instagram</span>@chronos.realty</a>
+        <a class="line" href="https://facebook.com/chronos.realty" target="_blank" rel="noopener"><span>Facebook</span>chronos.realty</a>
+        <a class="line" href="mailto:chronos.realty.am@gmail.com"><span>Почта</span>chronos.realty.am@gmail.com</a>
+        <div class="line"><span>Офис</span>Ереван, Чаренца 180/7</div>
+        <div class="line"><span>Часы</span>Пн–Сб 09:00–19:00</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap row">
+    <div>© 2026 CHRONOS Capital &amp; Realty · недвижимость Еревана</div>
+    <div>Юридическое сопровождение сделок — партнёрская адвокатская практика</div>
+  </div>
+</footer>
+
+<script>
+const hdr = document.getElementById('hdr');
+addEventListener('scroll', () => hdr.classList.toggle('solid', scrollY > 40), {passive:true});
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), {threshold:.12});
+document.querySelectorAll('.reveal').forEach((el,i) => { el.style.transitionDelay = (i%4)*60 + 'ms'; io.observe(el); });
+</script>
+</body>
+</html>
